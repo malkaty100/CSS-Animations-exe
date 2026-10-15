@@ -1,0 +1,48 @@
+.card{
+width: 200px;
+height: 300px;
+border:2px solid rgb(98, 98, 241);
+border-radius: 20px;
+margin: auto;
+text-align: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+transition:transform 2s ease-in;
+  animation: start  4s  forwards,
+move 3s infinite alternate ;
+ 
+
+}
+.card:hover{
+    
+    /* animation: rotate 4s; */
+    transform: rotate(360deg);
+    background-color: brown;
+}
+.title{text-align: center;}
+
+
+ @keyframes start {
+    0%{
+        opacity: 0%;
+      scale:0.1;
+    }
+   100%{ 
+  
+        opacity: 100%; 
+       scale:1;
+       
+    }
+} 
+@keyframes move{
+    0%{
+        translate:-40px;
+    }
+   100%{
+  translate:40px;
+   }
+}
+@media (prefers-reduced-motion: reduce) { .card { animation: none; opacity: 1; transform: none; } }
+
+
+
+
